@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 17 18:33:09 2021
 
+"""
 @author: khare
 """
 
@@ -14,21 +12,18 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler 
-#In this case study, you have been given Twitter data collected from an 
-#anonymous twitter handle. With the help of a Naïve Bayes model, 
-#predict if a given tweet about a real disaster is real or fake.
-#1 = real tweet and 0 = fake tweet
+
 
 from sklearn.feature_extraction.text import CountVectorizer,TfidfTransformer
 #%pip install re
 # Loading the data set
-data = pd.read_csv(r"C:/Users/khare/Downloads/ML_clasif_NaiveBay/assign\Disaster_tweets_NB.csv",encoding = "ISO-8859-1")
+data = pd.read_csv(r"\Disaster_tweets_NB.csv",encoding = "ISO-8859-1")
 
 # cleaning data 
 import re
 stop_words = []
 # Load the custom built Stopwords
-with open("C:/Users/khare/Downloads/ML_clasif_NaiveBay\stop.txt","r") as sw:
+with open("\stop.txt","r") as sw:
     stop_words = sw.read()
 
 stop_words = stop_words.split("\n")
